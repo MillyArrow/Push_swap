@@ -13,6 +13,11 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 # define BUFF_SIZE 1
+# define TRUE 1
+# define FALSE 0
+# define SINT_MAX 
+# define SINT_MIN
+# define SINT_MAX_P
 
 # include <string.h>
 # include <unistd.h>
@@ -100,5 +105,7 @@ int				ft_get_number(const char *c, size_t *i);
 int				ft_number_length(int64_t number, int base);
 void			ft_putnbrll(__int64_t n, int base);
 void			ft_arrdel(void ***arr);
+int				ft_isnumber(char *s);
+int				ft_isint(char *s);
 
 #endif
