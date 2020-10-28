@@ -109,7 +109,10 @@ SRC_LIBFT = \
 		get_next_line.c \
 		ft_number_length.c \
 		ft_putnbrll.c \
-		ft_get_number.c
+		ft_get_number.c \
+		ft_arrdel.c \
+		ft_isnumber.c \
+		ft_isint.c
 
 # PRINTF
 

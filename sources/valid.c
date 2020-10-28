@@ -1,23 +1,44 @@
 #include "push_swap.h"
 
-int valid(int ac, char **av)
+static void		check_duplicates(t_data *ptr)
+{
+	t_stack		*slow;
+	t_stack		*fast;
+
+	slow = ptr->a;
+	while (slow != ptr->a->prev)
+	{
+		fast = slow->next;
+		while (fast != ptr->a)
+		{
+			if (slow->nbr == fast->nbr)
+				ft_error(ptr);
+			fast = fast->next;
+		}
+		slow = slow->next;
+	}
+}
+
+void			valid(t_data *ptr)
 {
 	int i;
 	int j;
 	char **split_str;
 
-	i = 0;
-	while (av[i])
+	i = 1;
+	while (ptr->argv[i])
 	{
 		j = 0;
-		split_str = ft_strsplit(av[i],' ');
+		split_str = ft_strsplit(ptr->argv[i],' ');
 		while (split_str[j])
 		{
 			if (!ft_isint(split_str[j]))
-				return (FALSE);
+				ft_error(ptr);
+			stack_add_end(ptr,'a',ft_atoi(split_str[j]));
 			++j;
 		}
+		ft_arrdel((void ***)&split_str);
 		++i;
 	}
-	return (TRUE);
+	check_duplicates(ptr);
 }

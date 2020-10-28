@@ -15,9 +15,9 @@
 # define BUFF_SIZE 1
 # define TRUE 1
 # define FALSE 0
-# define SINT_MAX 
-# define SINT_MIN
-# define SINT_MAX_P
+# define SINT_MAX "2147483647"
+# define SINT_MIN "-2147483648"
+# define SINT_MAX_P "+2147483647"
 
 # include <string.h>
 # include <unistd.h>
