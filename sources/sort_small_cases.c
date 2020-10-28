@@ -9,27 +9,27 @@ static void		case_for_two(t_data *ptr)
 
 static void		case_for_three(t_data *ptr)
 {
-	long int		a1;
-	long int		a2;
-	long int		a3;
+	int		a;
+	int		b;
+	int		c;
 
 	if (sorted(ptr))
 		return ;
-	a1 = ptr->a->nbr;
-	a2 = ptr->a->next->nbr;
-	a3 = ptr->a->next->next->nbr;
-	if (a1 < a2 && a1 < a3 && a2 > a3)
+	a = ptr->a->nbr;
+	b = ptr->a->next->nbr;
+	c = ptr->a->next->next->nbr;
+	if (a < b && a < c && b > c)
 	{
 		do_rra(ptr);
 		do_sa(ptr);
 	}
-	else if (a1 > a2 && a1 < a3 && a2 < a3)
+	else if (a > b && a < c && b < c)
 		do_sa(ptr);
-	else if (a1 < a2 && a1 > a3 && a2 > a3)
+	else if (a < b && a > c && b > c)
 		do_rra(ptr);
-	else if (a1 > a2 && a1 > a3 && a2 < a3)
+	else if (a > b && a > c && b < c)
 		do_ra(ptr);
-	else if (a1 > a2 && a1 > a3 && a2 > a3)
+	else if (a > b && a > c && b > c)
 	{
 		do_ra(ptr);
 		do_sa(ptr);
@@ -40,10 +40,12 @@ static void		case_for_four(t_data *ptr)
 {
 	int min;
 	int	i;
+	int len;
 
 	min = min_stack(ptr->a);
-	i = 0;
-	while (i++ < stack_len(ptr, 'a'))
+	len = stack_len(ptr,'a');
+	i = -1;
+	while (++i < len)
 	{
 		if (ptr->a->nbr == min)
 			do_pb(ptr);
@@ -56,19 +58,19 @@ static void		case_for_four(t_data *ptr)
 
 static void		case_for_five(t_data *ptr)
 {
-	t_stack *end;
+	int		i;
 	int		mid_num;
+	int		len;
 
-	end = ptr->a->prev;
+	i = -1;
+	len = stack_len(ptr,'a');
 	mid_num = mid_number(ptr,'a');
-	while(1)
+	while(++i < len)
 	{
 		if (ptr->a->nbr <= mid_num)
 			do_pb(ptr);
 		else
 			do_ra(ptr);
-		if (ptr->a == end)
-			break ;
 	}
 	case_for_three(ptr);
 	if (ptr->b->nbr < ptr->b->next->nbr)

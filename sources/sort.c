@@ -31,7 +31,7 @@ static int		partition(int *arr, int l,int r)
 	return (less);
 }
 
-static void	quick_sort(int *arr, int l, int r)
+static void		quick_sort(int *arr, int l, int r)
 {
 	int q;
 
@@ -46,13 +46,8 @@ static void	quick_sort(int *arr, int l, int r)
 static void		sort(int *arr, int len)
 {
 	int i = 0;
-	if (*arr)
+	if (arr)
 		quick_sort(arr,0,len - 1);
-	while(arr[i])
-	{
-		ft_printf("%d \n",arr[i]);
-		++i;
-	}
 }
 
 int				mid_number(t_data *ptr, char stack_name)
