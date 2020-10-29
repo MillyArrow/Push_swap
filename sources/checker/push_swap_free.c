@@ -38,10 +38,6 @@ void		free_data(t_data *ptr)
 			free_stack(ptr->a);
 		if (ptr->b)
 			free_stack(ptr->b);
-		if (ptr->line)
-			free(ptr->line);
-		if (ptr->str)
-			free(ptr->str);
 		free(ptr);
 	}
 }

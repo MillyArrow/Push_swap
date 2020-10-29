@@ -37,7 +37,10 @@ void			valid(t_data *ptr)
 	int j;
 	char **split_str;
 
-	i = 1;
+	if (ptr->flag)
+		i = 2;
+	else
+		i = 1;
 	while (ptr->argv[i])
 	{
 		j = 0;

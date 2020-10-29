@@ -33,24 +33,17 @@ typedef struct		s_data
 {
 	t_stack			*a;
 	t_stack			*b;
-
 	int				do_write;
-
 	char			**argv;
-	char			*line;
-	char			*str;
-
 	t_stack			*min_forward;
 	t_stack			*min_backward;
 	int				min_next;
 	int				min_prev;
 	int				min_push;
-
 	t_stack			*max_forward;
 	t_stack			*max_backward;
 	int				max_next;
 	int				max_prev;
-
 	int				rotate;
 }					t_data;
 

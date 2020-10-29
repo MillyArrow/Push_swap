@@ -21,24 +21,18 @@ typedef struct		s_data
 {
 	t_stack			*a;
 	t_stack			*b;
-
 	int				do_write;
-
 	char			**argv;
-	char			*line;
-	char			*str;
-
+	int 			flag;
 	t_stack			*min_forward;
 	t_stack			*min_backward;
 	int				min_next;
 	int				min_prev;
 	int				min_push;
-
 	t_stack			*max_forward;
 	t_stack			*max_backward;
 	int				max_next;
 	int				max_prev;
-
 	int				rotate;
 }					t_data;
 
@@ -65,5 +59,8 @@ void				ss(t_data *ptr);
 void				rra(t_data *ptr);
 void				rrb(t_data *ptr);
 void				rrr(t_data *ptr);
-
+int					instruction(t_data *ptr, char *line);
+int					sorted(t_data *ptr);
+int 				check_flag(char **argv);
+void				print_two_stacks(t_data *frame, char *line);
 #endif
