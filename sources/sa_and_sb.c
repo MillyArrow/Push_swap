@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-void			do_sa(t_data *ptr)
+void			sa(t_data *ptr)
 {
 	long int	tmp;
 
@@ -26,7 +26,7 @@ void			do_sa(t_data *ptr)
 		write(1, "sa\n", 3);
 }
 
-void			do_sb(t_data *ptr)
+void			sb(t_data *ptr)
 {
 	long int	tmp;
 
@@ -40,14 +40,14 @@ void			do_sb(t_data *ptr)
 		write(1, "sb\n", 3);
 }
 
-void			do_ss(t_data *ptr)
+void			ss(t_data *ptr)
 {
 	int			do_write;
 
 	do_write = ptr->do_write;
 	ptr->do_write = 0;
-	do_sa(ptr);
-	do_sb(ptr);
+	sa(ptr);
+	sb(ptr);
 	ptr->do_write = do_write;
 	if (ptr->do_write)
 		write(1, "ss\n", 3);

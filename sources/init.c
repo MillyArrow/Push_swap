@@ -31,6 +31,6 @@ t_data		*initialize(t_data *ptr, char **argv)
 	ptr->max_backward = NULL;
 	ptr->max_next = 0;
 	ptr->max_prev = 0;
-	ptr->after_rotate = 0;
+	ptr->rotate = 0;
 	return (ptr);
 }

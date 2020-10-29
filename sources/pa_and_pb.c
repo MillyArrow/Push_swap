@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-void			do_pa(t_data *ptr)
+void			pa(t_data *ptr)
 {
 	int	tmp;
 
@@ -26,7 +26,7 @@ void			do_pa(t_data *ptr)
 		write(1, "pa\n", 3);
 }
 
-void			do_pb(t_data *ptr)
+void			pb(t_data *ptr)
 {
 	int	tmp;
 

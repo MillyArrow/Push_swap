@@ -15,7 +15,7 @@
 static void		case_for_two(t_data *ptr)
 {
 	if (ptr->a->nbr > ptr->a->next->nbr)
-		do_sa(ptr);
+		sa(ptr);
 }
 
 static void		case_for_three(t_data *ptr)
@@ -31,19 +31,19 @@ static void		case_for_three(t_data *ptr)
 	c = ptr->a->next->next->nbr;
 	if (a < b && a < c && b > c)
 	{
-		do_rra(ptr);
-		do_sa(ptr);
+		rra(ptr);
+		sa(ptr);
 	}
 	else if (a > b && a < c && b < c)
-		do_sa(ptr);
+		sa(ptr);
 	else if (a < b && a > c && b > c)
-		do_rra(ptr);
+		rra(ptr);
 	else if (a > b && a > c && b < c)
-		do_ra(ptr);
+		ra(ptr);
 	else if (a > b && a > c && b > c)
 	{
-		do_ra(ptr);
-		do_sa(ptr);
+		ra(ptr);
+		sa(ptr);
 	}
 }
 
@@ -59,12 +59,12 @@ static void		case_for_four(t_data *ptr)
 	while (++i < len)
 	{
 		if (ptr->a->nbr == min)
-			do_pb(ptr);
+			pb(ptr);
 		else
-			do_ra(ptr);
+			ra(ptr);
 	}
 	case_for_three(ptr);
-	do_pa(ptr);
+	pa(ptr);
 }
 
 static void		case_for_five(t_data *ptr)
@@ -79,15 +79,15 @@ static void		case_for_five(t_data *ptr)
 	while(++i < len)
 	{
 		if (ptr->a->nbr <= mid_num)
-			do_pb(ptr);
+			pb(ptr);
 		else
-			do_ra(ptr);
+			ra(ptr);
 	}
 	case_for_three(ptr);
 	if (ptr->b->nbr < ptr->b->next->nbr)
-		do_sb(ptr);
-	do_pa(ptr);
-	do_pa(ptr);
+		sb(ptr);
+	pa(ptr);
+	pa(ptr);
 }
 
 void			sort_small_cases(t_data *ptr)
