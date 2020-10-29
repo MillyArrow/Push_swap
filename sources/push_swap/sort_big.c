@@ -74,7 +74,7 @@ void			again_split_big(t_data *ptr)
 	}
 }
 
-static void		move_big(t_data *ptr)
+void		move_big(t_data *ptr)
 {
 	if (ptr->min_next && (ptr->min_push = 1))
 		while (ptr->min_next--)

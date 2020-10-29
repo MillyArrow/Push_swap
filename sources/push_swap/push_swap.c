@@ -32,7 +32,7 @@ int				sorted(t_data *ptr)
 
 void		push_swap(t_data *ptr)
 {
-	valid(ptr); //validation for digits
+	valid(ptr);
 	t_stack *start = ptr->a;
 	t_stack *end = ptr->a->prev;
 	ptr->do_write = 1;
@@ -49,9 +49,9 @@ void		push_swap(t_data *ptr)
 	}
 	ft_printf("start sort\n");*/
 	if (len <= 5)
-		sort_small_cases(ptr);
-/*	else if (len <= 100)
-		sort_hundred(ptr);*/
+		small_cases(ptr);
+	else if (len <= 100)
+		sort_hundred(ptr);
 	else
 		sort_big(ptr);
 	if (sorted(ptr))

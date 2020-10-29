@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-static	void	swap(int *a, int *b)
+void			swap(int *a, int *b)
 {
 	int tmp;
 
@@ -21,7 +21,7 @@ static	void	swap(int *a, int *b)
 	*b = tmp;
 }
 
-static int		partition(int *arr, int l,int r)
+int				partition(int *arr, int l,int r)
 {
 	int x;
 	int less;
@@ -43,7 +43,7 @@ static int		partition(int *arr, int l,int r)
 	return (less);
 }
 
-static void		quick_sort(int *arr, int l, int r)
+void			quick_sort(int *arr, int l, int r)
 {
 	int q;
 
@@ -55,7 +55,7 @@ static void		quick_sort(int *arr, int l, int r)
 	}
 }
 
-static void		sort(int *arr, int len)
+void			sort(int *arr, int len)
 {
 	int i = 0;
 	if (arr)

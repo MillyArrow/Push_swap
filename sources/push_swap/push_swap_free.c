@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-static void		free_stack(t_stack *stack)
+void		free_stack(t_stack *stack)
 {
 	t_stack		*track_next;
 	t_stack		*delete;
@@ -30,7 +30,7 @@ static void		free_stack(t_stack *stack)
 	}
 }
 
-static void		free_data(t_data *ptr)
+void		free_data(t_data *ptr)
 {
 	if (ptr)
 	{

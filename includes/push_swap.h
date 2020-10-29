@@ -15,7 +15,6 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <fcntl.h>
 
 # include "libft.h"
 # include "ft_printf.h"
@@ -59,10 +58,11 @@ typedef struct		s_data
 
 
 int					stack_len(t_data *ptr, char stack_name);
-void				sort_small_cases(t_data *ptr);
 
 t_data				*initialize(t_data *ptr, char **argv);
 
+void				free_stack(t_stack *stack);
+void				free_data(t_data *ptr);
 void				push_swap_free(t_data *ptr);
 void				ft_error(t_data *ptr);
 void				stack_add_end(t_data *ptr, char stack_name, int n);
@@ -81,16 +81,40 @@ void				rra(t_data *ptr);
 void				rrb(t_data *ptr);
 void				rrr(t_data *ptr);
 
-void				valid(t_data *ptr);
 void				push_swap(t_data *ptr);
+void				check_duplicates(t_data *ptr);
+void				valid(t_data *ptr);
 int					sorted(t_data *ptr);
 int					min_stack(t_stack *stack);
 int					max_stack(t_stack *stack);
+void				swap(int *a, int *b);
+int					partition(int *arr, int l,int r);
+void				quick_sort(int *arr, int l, int r);
+void				sort(int *arr, int len);
 int					mid_number(t_data *ptr, char stack_name);
-void				sort_hundred(t_data *frame);
-void				sort_big(t_data *frame);
 void				reset(t_data *frame);
 void				reset_big(t_data *frame);
 void				get_move(t_data *frame);
 void				get_min_max(t_data *frame);
+
+void				two(t_data *ptr);
+void				three(t_data *ptr);
+void				four(t_data *ptr);
+void				five(t_data *ptr);
+void				small_cases(t_data *ptr);
+
+void				move_hundred(t_data *frame);
+void				insert_hundred(t_data *ptr);
+void				mid_split(t_data *ptr);
+void				again_split(t_data *frame);
+void				sort_hundred(t_data *frame);
+
+void				mid_split_big(t_data *ptr);
+void				end_split_big(t_data *ptr);
+void				again_split_big(t_data *ptr);
+void				move_big(t_data *ptr);
+void				insert_big(t_data *ptr);
+void				insert_mid_big(t_data *ptr);
+void				sort_big(t_data *frame);
+
 #endif

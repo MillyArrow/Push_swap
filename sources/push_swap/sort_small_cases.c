@@ -12,13 +12,13 @@
 
 #include "push_swap.h"
 
-static void		case_for_two(t_data *ptr)
+void		two(t_data *ptr)
 {
 	if (ptr->a->nbr > ptr->a->next->nbr)
 		sa(ptr);
 }
 
-static void		case_for_three(t_data *ptr)
+void		three(t_data *ptr)
 {
 	int		a;
 	int		b;
@@ -47,7 +47,7 @@ static void		case_for_three(t_data *ptr)
 	}
 }
 
-static void		case_for_four(t_data *ptr)
+void		four(t_data *ptr)
 {
 	int min;
 	int	i;
@@ -63,11 +63,11 @@ static void		case_for_four(t_data *ptr)
 		else
 			ra(ptr);
 	}
-	case_for_three(ptr);
+	three(ptr);
 	pa(ptr);
 }
 
-static void		case_for_five(t_data *ptr)
+void		five(t_data *ptr)
 {
 	int		i;
 	int		mid_num;
@@ -83,14 +83,14 @@ static void		case_for_five(t_data *ptr)
 		else
 			ra(ptr);
 	}
-	case_for_three(ptr);
+	three(ptr);
 	if (ptr->b->nbr < ptr->b->next->nbr)
 		sb(ptr);
 	pa(ptr);
 	pa(ptr);
 }
 
-void			sort_small_cases(t_data *ptr)
+void			small_cases(t_data *ptr)
 {
 	int len;
 
@@ -98,11 +98,11 @@ void			sort_small_cases(t_data *ptr)
 	if (!ptr->a)
 		ft_error(ptr);
 	if (len == 2)
-		case_for_two(ptr);
+		two(ptr);
 	if (len == 3)
-		case_for_three(ptr);
+		three(ptr);
 	if (len == 4)
-		case_for_four(ptr);
+		four(ptr);
 	if (len == 5)
-		case_for_five(ptr);
+		five(ptr);
 }

@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker.h"
 
-static void		check_duplicates(t_data *ptr)
+void		check_duplicates(t_data *ptr)
 {
 	t_stack		*slow;
 	t_stack		*fast;
