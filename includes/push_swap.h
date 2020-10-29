@@ -92,4 +92,5 @@ int					sorted(t_data *ptr);
 int					min_stack(t_stack *stack);
 int					max_stack(t_stack *stack);
 int					mid_number(t_data *ptr, char stack_name);
+void				fifty_insert(t_data *frame);
 #endif

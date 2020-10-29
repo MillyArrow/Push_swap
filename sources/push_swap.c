@@ -36,7 +36,8 @@ void		push_swap(t_data *ptr)
 	t_stack *start = ptr->a;
 	t_stack *end = ptr->a->prev;
 	ptr->do_write = 1;
-	if (sorted(ptr) || stack_len(ptr, 'a') == 1)
+	int len = stack_len(ptr,'a');
+	if (sorted(ptr) || len == 1)
 		return ;
 	ft_printf("MID NUMBER = %d\n", mid_number(ptr,'a'));
 	while (start)
@@ -47,7 +48,10 @@ void		push_swap(t_data *ptr)
 		start = start->next;
 	}
 	ft_printf("start sort\n");
-	sort_small_cases(ptr);
+	if (len <= 5)
+		sort_small_cases(ptr);
+	else if (len <= 50)
+		sort_fifty(ptr);
 	if (sorted(ptr))
 		ft_printf("SORTED\n");
 	start = ptr->a;
@@ -60,20 +64,3 @@ void		push_swap(t_data *ptr)
 		start = start->next;
 	}
 }
-	/*if (!sorted(ptr))
-	{
-		// to_do
-		// if stack_len < 5 or 6
-		//	sort_small_cases
-
-int				main(int argc, char **argv)
-{
-	t_data		*ptr;
-
-	ptr = NULL;
-	if (argc < 2)
-		return (1);
-	ptr = initialize(ptr, argv);
-	push_swap(ptr);
-	return (0);
-}*/
