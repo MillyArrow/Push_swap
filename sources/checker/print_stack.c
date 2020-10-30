@@ -6,7 +6,7 @@
 /*   By: marrow <marrow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 13:28:48 by marrow            #+#    #+#             */
-/*   Updated: 2020/10/30 13:32:14 by marrow           ###   ########.fr       */
+/*   Updated: 2020/10/30 15:28:22 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int					check_flag(char **argv)
 	return (FALSE);
 }
 
-void				print_two_stacks(t_data *ptr, char *line)
+void				print_two_stacks(t_data *ptr)
 {
 	t_stack			*a;
 	t_stack			*b;

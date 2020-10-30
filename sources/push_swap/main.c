@@ -12,7 +12,14 @@
 
 #include "push_swap.h"
 
-int				main(int argc, char **argv)
+int					check_flag(char **argv)
+{
+	if (argv[1][0] == '-' && argv[1][1] == 'v' && !argv[1][2])
+		return (TRUE);
+	return (FALSE);
+}
+
+int					main(int argc, char **argv)
 {
 	t_data		*data;
 
@@ -21,6 +28,8 @@ int				main(int argc, char **argv)
 		return (1);
 	if (!(data = initialize(data, argv)))
 		ft_error(data);
+	if (check_flag(argv))
+		data->flag = TRUE;
 	push_swap(data);
 	push_swap_free(data);
 	return (0);

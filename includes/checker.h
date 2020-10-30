@@ -6,7 +6,7 @@
 /*   By: marrow <marrow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 13:35:06 by marrow            #+#    #+#             */
-/*   Updated: 2020/10/30 13:36:10 by marrow           ###   ########.fr       */
+/*   Updated: 2020/10/30 15:28:30 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,5 +72,5 @@ void				rrr(t_data *ptr);
 int					instruction(t_data *ptr, char *line);
 int					sorted(t_data *ptr);
 int					check_flag(char **argv);
-void				print_two_stacks(t_data *frame, char *line);
+void				print_two_stacks(t_data *frame);
 #endif

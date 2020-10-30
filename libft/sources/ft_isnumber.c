@@ -6,7 +6,7 @@
 /*   By: marrow <marrow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/24 02:56:18 by marrow            #+#    #+#             */
-/*   Updated: 2020/10/24 03:42:18 by marrow           ###   ########.fr       */
+/*   Updated: 2020/10/30 16:48:39 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ int		ft_isnumber(char *s)
 			return (FALSE);
 		++i;
 	}
-	return(TRUE);
+	return (TRUE);
 }

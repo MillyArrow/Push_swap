@@ -6,7 +6,7 @@
 /*   By: marrow <marrow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 13:28:28 by marrow            #+#    #+#             */
-/*   Updated: 2020/10/30 13:30:49 by marrow           ###   ########.fr       */
+/*   Updated: 2020/10/30 15:28:40 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void		check(t_data *ptr)
 
 	line = NULL;
 	if (ptr->flag)
-		print_two_stacks(ptr, line);
+		print_two_stacks(ptr);
 	while (get_next_line(0, &line) > 0)
 	{
 		if (!instruction(ptr, line))
@@ -27,7 +27,7 @@ void		check(t_data *ptr)
 			ft_memdel((void **)&line);
 		}
 		if (ptr->flag)
-			print_two_stacks(ptr, line);
+			print_two_stacks(ptr);
 		ft_memdel((void **)&line);
 	}
 }

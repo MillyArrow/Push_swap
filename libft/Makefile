@@ -151,7 +151,7 @@ OBJS_PRINTF = $(addprefix $(DIR_OBJ_PRINTF), $(SRC_PRINTF:.c=.o))
 
 .PHONY: all clean fclean re
 
-all: $(NAME)
+all: $(OBJS_LIBFT) $(OBJS_PRINTF) $(NAME)
 
 $(NAME): $(SRCS_LIBFT) $(OBJS_LIBFT) $(SRCS_PRINTF) $(OBJS_PRINTF) $(HEADERS)
 	@ar rcs $(NAME) $(OBJS_LIBFT) $(OBJS_PRINTF)

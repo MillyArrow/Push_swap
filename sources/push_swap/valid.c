@@ -6,11 +6,11 @@
 /*   By: marrow <marrow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 06:34:18 by marrow            #+#    #+#             */
-/*   Updated: 2020/10/30 13:19:17 by marrow           ###   ########.fr       */
+/*   Updated: 2020/10/30 13:34:00 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker.h"
 
 void			check_duplicates(t_data *ptr)
 {
@@ -37,7 +37,10 @@ void			valid(t_data *ptr)
 	int			j;
 	char		**split_str;
 
-	i = 1;
+	if (ptr->flag)
+		i = 2;
+	else
+		i = 1;
 	while (ptr->argv[i])
 	{
 		j = 0;
