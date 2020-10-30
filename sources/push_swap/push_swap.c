@@ -32,37 +32,17 @@ int				sorted(t_data *ptr)
 
 void		push_swap(t_data *ptr)
 {
+	int len;
+
 	valid(ptr);
-	t_stack *start = ptr->a;
-	t_stack *end = ptr->a->prev;
+	len= stack_len(ptr,'a');
 	ptr->do_write = 1;
-	int len = stack_len(ptr,'a');
 	if (sorted(ptr) || len == 1)
 		return ;
-/*	ft_printf("MID NUMBER = %d\n", mid_number(ptr,'a'));
-	while (start)
-	{
-		ft_printf("%d\n", start->nbr);
-		if (start == end)
-			break;
-		start = start->next;
-	}
-	ft_printf("start sort\n");*/
 	if (len <= 5)
 		small_cases(ptr);
 	else if (len <= 100)
 		sort_hundred(ptr);
 	else
 		sort_big(ptr);
-	if (sorted(ptr))
-		ft_printf("SORTED\n");
-	start = ptr->a;
-	end = ptr->a->prev;
-	while (start)
-	{
-		ft_printf("%d\n", start->nbr);
-		if (start == end)
-			break;
-		start = start->next;
-	}
 }

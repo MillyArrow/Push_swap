@@ -21,7 +21,6 @@ t_data		*initialize(t_data *ptr, char **argv)
 	ptr->do_write = 0;
 	ptr->argv = argv;
 	ptr->line = NULL;
-	ptr->str = NULL;
 	ptr->min_forward = NULL;
 	ptr->min_backward = NULL;
 	ptr->min_next = 0;

@@ -97,6 +97,7 @@ int				max_stack(t_stack *stack)
 
 	start = stack;
 	end = stack->prev;
+	max = 0;
 	while (start)
 	{
 		if (start->nbr > max)
