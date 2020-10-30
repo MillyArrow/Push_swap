@@ -5,6 +5,8 @@ void	check(t_data *ptr)
 	char 	*line;
 
 	line = NULL;
+	if (ptr->flag)
+		print_two_stacks(ptr,line);
 	while(get_next_line(0,&line) > 0)
 	{
 		if (!instruction(ptr,line))

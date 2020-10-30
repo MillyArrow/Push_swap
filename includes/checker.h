@@ -24,6 +24,7 @@ typedef struct		s_data
 	int				do_write;
 	char			**argv;
 	int 			flag;
+	char 			*line;
 	t_stack			*min_forward;
 	t_stack			*min_backward;
 	int				min_next;

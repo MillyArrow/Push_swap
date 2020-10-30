@@ -2,27 +2,27 @@
 
 int		instruction(t_data *ptr, char *line)
 {
-	if (ft_strstr(line,"ss"))
+	if (!ft_strcmp(line,"ss") && (ptr->line = "ss"))
 		ss(ptr);
-	else if (ft_strstr(line,"rra"))
+	else if (!ft_strcmp(line,"rra") && (ptr->line = "rra"))
 		rra(ptr);
-	else if (ft_strstr(line,"rrb"))
+	else if (!ft_strcmp(line,"rrb") && (ptr->line = "rrb"))
 		rrb(ptr);
-	else if (ft_strstr(line,"rrr"))
+	else if (!ft_strcmp(line,"rrr")&& (ptr->line = "rrr") )
 		rrr(ptr);
-	else if (ft_strstr(line,"pa"))
+	else if (!ft_strcmp(line,"pa") && (ptr->line = "pa"))
 		pa(ptr);
-	else if (ft_strstr(line,"pb"))
+	else if (!ft_strcmp(line,"pb")&& (ptr->line = "pb"))
 		pb(ptr);
-	else if (ft_strstr(line,"ra"))
+	else if (!ft_strcmp(line,"ra")&& (ptr->line = "ra"))
 		ra(ptr);
-	else if (ft_strstr(line,"rb"))
+	else if (!ft_strcmp(line,"rb")&& (ptr->line = "rb"))
 		rb(ptr);
-	else if (ft_strstr(line,"rr"))
+	else if (!ft_strcmp(line,"rr")&& (ptr->line = "rr"))
 		rr(ptr);
-	else if (ft_strstr(line,"sa"))
+	else if (!ft_strcmp(line,"sa") && (ptr->line = "sa"))
 		sa(ptr);
-	else if (ft_strstr(line,"sb"))
+	else if (!ft_strcmp(line,"sb") && (ptr->line = "sb"))
 		sb(ptr);
 	else
 		return (FALSE);
