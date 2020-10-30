@@ -6,7 +6,7 @@
 /*   By: marrow <marrow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 06:34:12 by marrow            #+#    #+#             */
-/*   Updated: 2020/10/28 06:34:12 by marrow           ###   ########.fr       */
+/*   Updated: 2020/10/30 13:14:02 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,9 +91,9 @@ void			stack_del_top(t_data *ptr, char stack_name)
 
 int				max_stack(t_stack *stack)
 {
-	t_stack *start;
-	t_stack *end;
-	int max;
+	t_stack		*start;
+	t_stack		*end;
+	int			max;
 
 	start = stack;
 	end = stack->prev;
@@ -111,9 +111,9 @@ int				max_stack(t_stack *stack)
 
 int				min_stack(t_stack *stack)
 {
-	t_stack *start;
-	t_stack *end;
-	int min;
+	t_stack		*start;
+	t_stack		*end;
+	int			min;
 
 	start = stack;
 	end = stack->prev;

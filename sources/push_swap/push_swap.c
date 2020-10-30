@@ -6,7 +6,7 @@
 /*   By: marrow <marrow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 06:33:33 by marrow            #+#    #+#             */
-/*   Updated: 2020/10/28 06:33:35 by marrow           ###   ########.fr       */
+/*   Updated: 2020/10/30 13:17:10 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,12 @@ int				sorted(t_data *ptr)
 	return (TRUE);
 }
 
-void		push_swap(t_data *ptr)
+void			push_swap(t_data *ptr)
 {
-	int len;
+	int			len;
 
 	valid(ptr);
-	len= stack_len(ptr,'a');
+	len = stack_len(ptr, 'a');
 	ptr->do_write = 1;
 	if (sorted(ptr) || len == 1)
 		return ;

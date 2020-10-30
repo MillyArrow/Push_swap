@@ -1,28 +1,40 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   print_stack.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marrow <marrow@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/30 13:28:48 by marrow            #+#    #+#             */
+/*   Updated: 2020/10/30 13:32:14 by marrow           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "checker.h"
 
-int 				check_flag(char **argv)
+int					check_flag(char **argv)
 {
 	if (argv[1][0] == '-' && argv[1][1] == 'v' && !argv[1][2])
-		return(TRUE);
-	return(FALSE);
+		return (TRUE);
+	return (FALSE);
 }
 
-void			print_two_stacks(t_data *ptr, char *line)
+void				print_two_stacks(t_data *ptr, char *line)
 {
-	t_stack *a;
-	t_stack *b;
+	t_stack			*a;
+	t_stack			*b;
 
 	a = ptr->a;
 	b = ptr->b;
-	(ptr->line) ? ft_printf("\n  Instruction:%5s\n",ptr->line) : 0;
+	(ptr->line) ? ft_printf("\n  Instruction:%5s\n", ptr->line) : 0;
 	ft_printf("  _______   _______\n");
 	ft_printf("|    A    |    B    |\n");
 	ft_printf(" __________________\n");
-	while(1)
+	while (1)
 	{
-		(a) ? ft_printf("|  %3d    |",a->nbr) :
+		(a) ? ft_printf("|  %3d    |", a->nbr) :
 		ft_printf("|    #    |");
-		(b) ? ft_printf("  %3d    |\n",b->nbr) :
+		(b) ? ft_printf("  %3d    |\n", b->nbr) :
 		ft_printf("    #    |\n");
 		(a || b) ? ft_printf(" __________________\n") :
 		ft_printf(" __________________\n\n\n");

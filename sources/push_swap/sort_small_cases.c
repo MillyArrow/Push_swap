@@ -6,7 +6,7 @@
 /*   By: marrow <marrow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 06:34:31 by marrow            #+#    #+#             */
-/*   Updated: 2020/10/28 06:34:33 by marrow           ###   ########.fr       */
+/*   Updated: 2020/10/30 13:22:25 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,12 +49,12 @@ void		three(t_data *ptr)
 
 void		four(t_data *ptr)
 {
-	int min;
-	int	i;
-	int len;
+	int		min;
+	int		i;
+	int		len;
 
 	min = min_stack(ptr->a);
-	len = stack_len(ptr,'a');
+	len = stack_len(ptr, 'a');
 	i = -1;
 	while (++i < len)
 	{
@@ -74,9 +74,9 @@ void		five(t_data *ptr)
 	int		len;
 
 	i = -1;
-	len = stack_len(ptr,'a');
-	mid_num = mid_number(ptr,'a');
-	while(++i < len)
+	len = stack_len(ptr, 'a');
+	mid_num = mid_number(ptr, 'a');
+	while (++i < len)
 	{
 		if (ptr->a->nbr <= mid_num)
 			pb(ptr);
@@ -90,11 +90,11 @@ void		five(t_data *ptr)
 	pa(ptr);
 }
 
-void			small_cases(t_data *ptr)
+void		small_cases(t_data *ptr)
 {
-	int len;
+	int		len;
 
-	len = stack_len(ptr,'a');
+	len = stack_len(ptr, 'a');
 	if (!ptr->a)
 		ft_error(ptr);
 	if (len == 2)

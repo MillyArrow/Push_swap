@@ -6,13 +6,13 @@
 /*   By: marrow <marrow@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 06:33:24 by marrow            #+#    #+#             */
-/*   Updated: 2020/10/28 06:33:26 by marrow           ###   ########.fr       */
+/*   Updated: 2020/10/30 13:17:29 by marrow           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void		free_stack(t_stack *stack)
+void			free_stack(t_stack *stack)
 {
 	t_stack		*track_next;
 	t_stack		*delete;
@@ -30,7 +30,7 @@ void		free_stack(t_stack *stack)
 	}
 }
 
-void		free_data(t_data *ptr)
+void			free_data(t_data *ptr)
 {
 	if (ptr)
 	{

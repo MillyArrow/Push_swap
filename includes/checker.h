@@ -1,5 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   checker.h                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marrow <marrow@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/30 13:35:06 by marrow            #+#    #+#             */
+/*   Updated: 2020/10/30 13:36:10 by marrow           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef CHECKER_H
-#define CHECKER_H
+# define CHECKER_H
 
 # include <unistd.h>
 # include <stdlib.h>
@@ -7,15 +19,12 @@
 # include "libft.h"
 # include "ft_printf.h"
 
-
-
 typedef struct		s_stack
 {
-	int		nbr;
+	int				nbr;
 	struct s_stack	*next;
 	struct s_stack	*prev;
 }					t_stack;
-
 
 typedef struct		s_data
 {
@@ -23,8 +32,8 @@ typedef struct		s_data
 	t_stack			*b;
 	int				do_write;
 	char			**argv;
-	int 			flag;
-	char 			*line;
+	int				flag;
+	char			*line;
 	t_stack			*min_forward;
 	t_stack			*min_backward;
 	int				min_next;
@@ -62,6 +71,6 @@ void				rrb(t_data *ptr);
 void				rrr(t_data *ptr);
 int					instruction(t_data *ptr, char *line);
 int					sorted(t_data *ptr);
-int 				check_flag(char **argv);
+int					check_flag(char **argv);
 void				print_two_stacks(t_data *frame, char *line);
 #endif

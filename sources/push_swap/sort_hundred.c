@@ -1,7 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_hundred.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marrow <marrow@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/30 13:20:15 by marrow            #+#    #+#             */
+/*   Updated: 2020/10/30 13:23:49 by marrow           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "push_swap.h"
 
-void		move_hundred(t_data *frame)
+void			move_hundred(t_data *frame)
 {
 	if (frame->min_backward->nbr == frame->min_backward->next->nbr)
 	{
@@ -47,6 +58,7 @@ void			insert_hundred(t_data *ptr)
 			ra(ptr);
 	}
 }
+
 void			mid_split(t_data *ptr)
 {
 	int			len;
@@ -57,7 +69,7 @@ void			mid_split(t_data *ptr)
 		return ;
 	i = 0;
 	mid = mid_number(ptr, 'a');
-	len = stack_len(ptr,'a');
+	len = stack_len(ptr, 'a');
 	while (i++ < len)
 	{
 		if (ptr->a->nbr <= mid)
@@ -66,7 +78,8 @@ void			mid_split(t_data *ptr)
 			ra(ptr);
 	}
 }
-void	again_split(t_data *frame)
+
+void			again_split(t_data *frame)
 {
 	long int	min;
 	long int	mid;
@@ -82,7 +95,7 @@ void	again_split(t_data *frame)
 	}
 }
 
-void	sort_hundred(t_data *frame)
+void			sort_hundred(t_data *frame)
 {
 	if (sorted(frame))
 		return ;

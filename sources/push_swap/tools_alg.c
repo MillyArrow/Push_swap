@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   tools_alg.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: marrow <marrow@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/30 13:19:58 by marrow            #+#    #+#             */
+/*   Updated: 2020/10/30 13:25:50 by marrow           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-void		reset(t_data *ptr)
+void			reset(t_data *ptr)
 {
 	ptr->min_forward = NULL;
 	ptr->min_backward = NULL;
@@ -13,21 +25,9 @@ void		reset(t_data *ptr)
 	ptr->max_prev = 0;
 }
 
-void		reset_big(t_data *ptr)
+void			get_move(t_data *ptr)
 {
-	ptr->min_forward = NULL;
-	ptr->min_backward = NULL;
-	ptr->min_next = 0;
-	ptr->min_prev = 0;
-	ptr->max_forward = NULL;
-	ptr->max_backward = NULL;
-	ptr->max_next = 0;
-	ptr->max_prev = 0;
-}
-
-void		get_move(t_data *ptr)
-{
-	int i;
+	int			i;
 
 	i = 0;
 	while (++i)
@@ -50,7 +50,7 @@ void		get_move(t_data *ptr)
 	}
 }
 
-void		get_min_max(t_data *ptr)
+void			get_min_max(t_data *ptr)
 {
 	t_stack		*min;
 	t_stack		*max;
@@ -74,4 +74,3 @@ void		get_min_max(t_data *ptr)
 	ptr->max_forward = max->next;
 	ptr->max_backward = max->prev;
 }
-
